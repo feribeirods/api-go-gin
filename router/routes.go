@@ -1,11 +1,18 @@
 package router
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/feribeirods/api-go-gin/handler"
+	"github.com/gin-gonic/gin"
+)
 
 func initializeRoutes(router *gin.Engine) {
-	router.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
+	v1 := router.Group("/api/v1")
+
+	v1.GET("/games", handler.HandleGetGames)
+
+	v1.POST("/games", handler.PostNewGame)
+
+	v1.PUT("/games", handler.UpdateGame)
+
+	v1.DELETE("/games", handler.DeleteGame)
 }
