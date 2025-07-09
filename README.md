@@ -38,7 +38,7 @@ A API permite realizar operações CRUD sobre uma lista de jogos (games), utiliz
 
 1. Clone o repositório:
 ```
-git clone https://github.com/seu-usuario/game-api-go.git
+git clone https://github.com/feribeirods/api-go-gin.git
 cd game-api-go
 ```
 2. Crie um arquivo .env com as variáveis de conexão:
